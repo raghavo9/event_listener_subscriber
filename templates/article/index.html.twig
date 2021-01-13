@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ArticleController!{% endblock %}
+
+{% block body %}
+
+{% for art in article %}
+
+
+<a href="/articleById/{{ art.getId }}" syle="display:block">
+<div style =" float:left;margin-left:30px;margin-top:30px;background-color:khaki;border-radius:20px; padding:10px;box-shadow: 5px 10px #888888;">
+
+article id : {{ art.getId }}
+<br>
+article title : {{ art.getTitle }}
+<br>
+article category :  {{ art.getCategory }}
+<br>
+article content :  {{ art.getContent()|striptags|slice(0, 30) }} .......
+<br>
+written by :  {{ art.getArticleAuthor }}
+
+<br>
+</div>
+</a>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ListUserController!{% endblock %}
+
+{% block body %}
+
+{% for u in user %}
+{{ u.getUsername }}
+<br>
+{{ u.getEmail }}
+<br>
+{{ u.getContact }}
+<br>
+{{ u.getFirstName }}
+<br>
+{{ u.getLastName }}
+<br>
+<br>
+<br>
+{% endfor %}
+
+{% endblock %}
